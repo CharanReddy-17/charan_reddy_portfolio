@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marada Charan Reddy — CS & Engineering student. Developer Portfolio showcasing projects, skills, education and certifications.">
+    <title>Marada Charan Reddy | Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">MCR</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Profile</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#contact" class="nav-link btn-contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileBtn" aria-label="Toggle menu">
+                <i class="ti ti-menu-2"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <main>
+        <!-- ===================== HERO / PROFILE SECTION ===================== -->
+        <section id="hero" class="hero-section section">
+            <div class="container">
+                <div class="hero-layout reveal">
+                    <!-- Left: Text -->
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Marada<br>
+                            <span class="gradient-text">Charan Reddy</span>
+                        </h1>
+                        <div class="hero-role-wrapper">
+                            <span class="role-prefix">I am a </span>
+                            <span class="typed-text" id="typedText"></span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+                        <p class="hero-desc">
+                            B.Tech CSE student at LPU with a passion for Data Science — transforming raw data into meaningful insights, building ML-powered solutions, and uncovering patterns that drive smart decisions. Based in India 🇮🇳
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="ti ti-briefcase"></i> View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="ti ti-send"></i> Hire Me
+                            </a>
+                            <a href="CV.pdf" download="Marada_Charan_Reddy_CV.pdf" class="btn btn-cv">
+                                <i class="ti ti-download"></i> Download CV
+                            </a>
+                        </div>
+                        <div class="social-row">
+                            <a href="https://github.com/CharanReddy-17" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                                <i class="ti ti-brand-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/marada-charan-reddy" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                                <i class="ti ti-brand-linkedin"></i>
+                            </a>
+                            <a href="mailto:maradacharanreddy@gmail.com" aria-label="Email" class="social-icon">
+                                <i class="ti ti-mail"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Profile Photo -->
+                    <div class="hero-photo-side">
+                        <div class="photo-frame">
+                            <div class="photo-ring ring-1"></div>
+                            <div class="photo-ring ring-2"></div>
+                            <div class="photo-placeholder" id="photoPlaceholder">
+                                <input type="file" id="photoInput" accept="image/*" style="display:none">
+                                <img src="my formal pic.jpeg" alt="Marada Charan Reddy" id="profileImg" class="profile-img">
+                            </div>
+                            <div class="photo-badge">
+                                <span class="badge-dot"></span> Available for work
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span class="mono-text">scroll down</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT / PROFILE DETAIL ===================== -->
+        <section id="about" class="about-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">01.</span> About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm <strong class="accent-inline">Marada Charan Reddy</strong>, a Computer Science & Engineering student at 
+                            <strong class="accent-inline">Lovely Professional University</strong>, Phagwara, Punjab. 
+                            My core interest lies in <strong class="accent-inline">Data Science</strong> — turning raw data into actionable insights that drive real-world decisions.
+                        </p>
+                        <p>
+                            I work with <strong class="accent-inline">Python, SQL, and data analysis tools</strong> like Power BI and Excel to explore, visualize, and interpret complex datasets. 
+                            I'm also building a strong foundation in Machine Learning and statistical modeling to take my data skills further.
+                        </p>
+                        <p>
+                            Outside of academics, I participate in hackathons, work on personal data projects, and constantly upskill through certifications. 
+                            I'm driven by curiosity and a growth mindset — always ready to collaborate on impactful, data-driven projects.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="ti ti-map-pin"></i>
+                                <span>Punjab, India</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-school"></i>
+                                <span>B.Tech CSE | LPU</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-mail"></i>
+                                <span>maradacharanreddy@gmail.com</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-phone"></i>
+                                <span>+91-9290308705</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">6.87</span>
+                            <span class="stat-label">Current CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">3+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">2</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">1</span>
+                            <span class="stat-label">Hackathons</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EDUCATION ===================== -->
+        <section id="education" class="education-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">02.</span> Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-building-community"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>B.Tech — Computer Science & Engineering</h3>
+                                    <h4>Lovely Professional University (LPU)</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">Aug 2023 – Present</span>
+                                    <span class="badge-score">CGPA: <strong>6.87</strong></span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Pursuing specialization in Data Science and AI. Active in hackathons, projects, and extracurriculars. Developing strong foundations in DSA, OS, DBMS and system design.</p>
+                            <ul class="timeline-tags">
+                                <li>DSA</li><li>System Design</li><li>AI/ML</li><li>Web Dev</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-school"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Intermediate Education (MPC)</h3>
+                                    <h4>Sri Chaitanya Junior College</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">2021 – 2023</span>
+                                    <span class="badge-score">86.3%</span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Studied Mathematics, Physics and Chemistry with a focus on analytical problem solving and logical reasoning.</p>
+                            <ul class="timeline-tags">
+                                <li>Mathematics</li><li>Physics</li><li>Chemistry</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-pencil"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Secondary Education (SSC)</h3>
+                                    <h4>Chalapathi Public School</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">2021</span>
+                                    <span class="badge-score">GPA: 9.8</span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Achieved academic excellence with consistent top performance across all subjects.</p>
+                            <ul class="timeline-tags">
+                                <li>Science</li><li>Mathematics</li><li>Social Studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="skills-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">03.</span> Skills & Tech</h2>
+                <div class="sk-domain-grid">
+
+                    <!-- Data Science -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-chart-dots-3"></i></div>
+                            <h3>Data Science</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-brand-python"></i> Python</span>
+                            <span class="sk-pill"><i class="ti ti-database"></i> SQL</span>
+                            <span class="sk-pill"><i class="ti ti-chart-bar"></i> Power BI</span>
+                            <span class="sk-pill"><i class="ti ti-table"></i> Excel</span>
+                            <span class="sk-pill"><i class="ti ti-robot"></i> Machine Learning</span>
+                            <span class="sk-pill"><i class="ti ti-wave-sine"></i> Statistics</span>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-code"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-brand-python"></i> Python</span>
+                            <span class="sk-pill"><i class="ti ti-coffee"></i> Java</span>
+                            <span class="sk-pill"><i class="ti ti-file-code"></i> C++</span>
+                            <span class="sk-pill"><i class="ti ti-file-code"></i> C</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-world"></i></div>
+                            <h3>Web Dev</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-brand-html5"></i> HTML5</span>
+                            <span class="sk-pill"><i class="ti ti-brand-css3"></i> CSS3</span>
+                            <span class="sk-pill"><i class="ti ti-brand-javascript"></i> JavaScript</span>
+                            <span class="sk-pill"><i class="ti ti-brand-typescript"></i> TypeScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-tools"></i></div>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-brand-github"></i> GitHub</span>
+                            <span class="sk-pill"><i class="ti ti-git-branch"></i> Git</span>
+                            <span class="sk-pill"><i class="ti ti-database"></i> Supabase</span>
+                            <span class="sk-pill"><i class="ti ti-cpu"></i> VS Code</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="projects-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">04.</span> Featured Projects</h2>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">01</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub" class="p-link"><i class="ti ti-brand-github"></i></a>
+                                <a href="#" aria-label="Live Demo" class="p-link"><i class="ti ti-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-robot"></i>
+                        </div>
+                        <h3 class="project-title">Astronomy Glossary AI Chatbot</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Mar – Apr 2025</p>
+                        <p class="project-desc">
+                            Intelligent chatbot explaining 200+ astronomical terms with sub-second responses. Achieved ~70% better contextual understanding over keyword matching.
+                        </p>
+                        <ul class="project-stack">
+                            <li>TypeScript</li><li>Vite</li><li>Supabase</li><li>Python</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">02</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub" class="p-link"><i class="ti ti-brand-github"></i></a>
+                                <a href="#" aria-label="Live Demo" class="p-link"><i class="ti ti-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-shield-lock"></i>
+                        </div>
+                        <h3 class="project-title">Automated Deadlock Detection Tool</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Mar – Apr 2025</p>
+                        <p class="project-desc">
+                            Detects deadlocks in processes with 100% accuracy, running 5× faster than manual checking and saving 80% of debugging time.
+                        </p>
+                        <ul class="project-stack">
+                            <li>Python</li><li>TypeScript</li><li>HTML/CSS</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">03</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub" class="p-link"><i class="ti ti-brand-github"></i></a>
+                                <a href="#" aria-label="Live Demo" class="p-link"><i class="ti ti-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-gavel"></i>
+                        </div>
+                        <h3 class="project-title">Collector-S-Hub Auction Platform</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Oct – Nov 2023</p>
+                        <p class="project-desc">
+                            Full auction platform for collectors with improved accessibility (100%), reduced manual effort (80%), and +50% user engagement.
+                        </p>
+                        <ul class="project-stack">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">04</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub" class="p-link"><i class="ti ti-brand-github"></i></a>
+                                <a href="#" aria-label="Live Demo" class="p-link"><i class="ti ti-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-chart-bar"></i>
+                        </div>
+                        <h3 class="project-title">Zara Sales Dashboard</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> 2025</p>
+                        <p class="project-desc">
+                            Interactive Power BI dashboard transforming raw retail data into actionable business insights. Built KPI metrics, trend analysis &amp; dynamic visualizations using DAX, Power Query and data modeling — enabling data-driven strategic decisions.
+                        </p>
+                        <ul class="project-stack">
+                            <li>Power BI</li><li>DAX</li><li>Power Query</li><li>Data Modeling</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">05</span>
+                            <div class="project-links">
+                                <a href="#" aria-label="GitHub" class="p-link"><i class="ti ti-brand-github"></i></a>
+                                <a href="#" aria-label="Live Demo" class="p-link"><i class="ti ti-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-users"></i>
+                        </div>
+                        <h3 class="project-title">Customer Churn Prediction</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> 2025</p>
+                        <p class="project-desc">
+                            ML model predicting customer churn with high accuracy using Logistic Regression &amp; Random Forest. Integrated SHAP for explainability and deployed a real-time Streamlit web app — helping businesses proactively reduce churn with data-driven retention strategies.
+                        </p>
+                        <ul class="project-stack">
+                            <li>Python</li><li>Scikit-learn</li><li>SHAP</li><li>Streamlit</li><li>Pandas</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CERTIFICATIONS ===================== -->
+        <section id="certifications" class="certs-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">05.</span> Certifications & Achievements</h2>
+                <div class="certs-grid">
+
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="ti ti-world-www"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Responsive Web Design</h3>
+                            <p class="cert-issuer">FreeCodeCamp</p>
+                            <span class="cert-tag">Certification</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/18ceHnzA0Y3-s_O9W9wyE-SNEGP5K1Q8h/view" target="_blank" rel="noopener" class="cert-arrow"><i class="ti ti-arrow-up-right"></i></a>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon-wrap">
+                            <i class="ti ti-shield-check"></i>
+                        </div>
+                        <div class="cert-body">
+                            <h3>Social Media Privacy</h3>
+                            <p class="cert-issuer">NPTEL</p>
+                            <span class="cert-tag">Certification</span>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1C3Fbc0BS23GownMSvwDWCdm8pFnQ_Gv_/view" target="_blank" rel="noopener" class="cert-arrow"><i class="ti ti-arrow-up-right"></i></a>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TRAINING & CO-CURRICULAR ===================== -->
+        <section id="activities" class="activities-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">06.</span> Training & Co-Curricular</h2>
+                <div class="activities-grid">
+
+                    <!-- Training -->
+                    <div class="activity-col">
+                        <h3 class="activity-col-title"><i class="ti ti-book"></i> Training</h3>
+                        <div class="activity-list">
+                            <div class="activity-card">
+                                <div class="activity-icon"><i class="ti ti-device-laptop"></i></div>
+                                <div class="activity-body">
+                                    <h4>Java + DSA</h4>
+                                    <p>Cipher Schools</p>
+                                    <span class="activity-tag">Online Training</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Co-Curricular -->
+                    <div class="activity-col">
+                        <h3 class="activity-col-title"><i class="ti ti-tournament"></i> Co-Curricular Activities</h3>
+                        <div class="activity-list">
+                            <div class="activity-card highlight">
+                                <div class="activity-icon gold"><i class="ti ti-trophy"></i></div>
+                                <div class="activity-body">
+                                    <h4>Hack Verse Hackathon</h4>
+                                    <p>Round 2 Qualifier</p>
+                                    <span class="activity-tag gold-tag">Achievement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="contact-section section">
+            <div class="container reveal">
+                <h2 class="section-title text-center"><span class="section-num">07.</span> Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <!-- Contact Info Side -->
+                    <div class="contact-info-side">
+                        <h3>Let's build something together.</h3>
+                        <p>I'm currently open to internships, freelance projects, and full-time opportunities. Whether you have a question, a cool idea, or just want to say hi — my inbox is open!</p>
+                        <div class="contact-details">
+                            <a href="mailto:maradacharanreddy@gmail.com" class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-mail"></i></div>
+                                <div>
+                                    <span class="cd-label">Email</span>
+                                    <span class="cd-value">maradacharanreddy@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+919290308705" class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-phone"></i></div>
+                                <div>
+                                    <span class="cd-label">Phone</span>
+                                    <span class="cd-value">+91-9290308705</span>
+                                </div>
+                            </a>
+                            <div class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-map-pin"></i></div>
+                                <div>
+                                    <span class="cd-label">Location</span>
+                                    <span class="cd-value">Punjab, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://github.com/CharanReddy-17" target="_blank" rel="noopener" class="contact-social-btn">
+                                <i class="ti ti-brand-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/marada-charan-reddy" target="_blank" rel="noopener" class="contact-social-btn">
+                                <i class="ti ti-brand-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Contact Form Side -->
+                    <div class="contact-form-side">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+                                <input type="text" id="contactName" placeholder="Alex Johnson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" placeholder="alex@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject" placeholder="Project Collaboration">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                                <i class="ti ti-send"></i> Send Message
+                            </button>
+                            <div class="form-success" id="formSuccess">
+                                <i class="ti ti-circle-check"></i> Message sent! I'll get back to you soon.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="logo">MCR</span>
+                <p class="footer-copy">Designed & Built by <strong>Marada Charan Reddy</strong> · 2025</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/CharanReddy-17" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i></a>
+                    <a href="https://www.linkedin.com/in/marada-charan-reddy" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
